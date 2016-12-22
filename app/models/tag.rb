@@ -6,6 +6,10 @@ class Tag < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :restaurants,
+             :through => :restaurant_tags,
+             :source => :restaurants
+
   # Validations
 
 end
