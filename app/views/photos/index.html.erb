@@ -16,7 +16,7 @@
 
       <% @photos.each do |photo| %>
       <tr>
-        <td><%= photo.reviews_id %></td>
+        <td><%= photo.reviews.rating %></td>
         <td><%= photo.image %></td>
         <td>
           <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>
