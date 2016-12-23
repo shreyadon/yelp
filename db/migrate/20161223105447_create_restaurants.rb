@@ -6,6 +6,8 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :neighborhood
       t.string :city
       t.string :address
+      t.string :cover_photo
+      t.string :website
 
       t.timestamps
 

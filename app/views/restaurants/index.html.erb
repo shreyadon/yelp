@@ -14,6 +14,11 @@
   </div>
 
 <div class="form-group">
+    <%= f.label :website_cont, "Website contains" %>
+    <%= f.text_field :website_cont, :class => "form-control", :placeholder => "Website contains" %>
+  </div>
+
+<div class="form-group">
     <%= f.label :city_cont, "City contains" %>
     <%= f.text_field :city_cont, :class => "form-control", :placeholder => "City contains" %>
   </div>
@@ -106,6 +111,8 @@
         <th>Neighborhood</th>
         <th>City</th>
         <th>Address</th>
+        <th>Cover photo</th>
+        <th>Website</th>
         <th>Actions</th>
       </tr>
 
@@ -116,6 +123,8 @@
         <td><%= restaurant.neighborhood %></td>
         <td><%= restaurant.city %></td>
         <td><%= restaurant.address %></td>
+        <td><img src='<%= restaurant.cover_photo %>' class='img-responsive'></td>
+        <td><%= restaurant.website %></td>
         <td>
           <a href="/restaurants/<%= restaurant.id %>" class="btn btn-primary">Show</a>
           <a href="/restaurants/<%= restaurant.id %>/edit" class="btn btn-warning">Edit</a>

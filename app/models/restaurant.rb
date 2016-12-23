@@ -18,6 +18,8 @@ class Restaurant < ApplicationRecord
       end
     end
   end
+  mount_uploader :cover_photo, CoverPhotoUploader
+
   # Direct associations
 
   has_many   :restaurant_tags,
