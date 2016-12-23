@@ -14,7 +14,7 @@
 
 <div class="row">
   <div class="col-md-12">
-    <form action="/update_restaurant/<%= @restaurant.id %>" method="post">
+    <form action="/update_restaurant/<%= @restaurant.id %>" method="post" enctype="multipart/form-data">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
 
@@ -61,6 +61,24 @@
         </label>
 
         <input type="text" id="address" name="address" placeholder="Address" class="form-control" value="<%= @restaurant.address %>">
+      </div>
+
+      <!-- Label and input for cover_photo -->
+      <div class="form-group">
+        <label for="cover_photo" class="control-label">
+          Cover photo
+        </label>
+
+        <input type="text" id="cover_photo" name="cover_photo" placeholder="Cover photo" class="form-control" value="<%= @restaurant.cover_photo %>">
+      </div>
+
+      <!-- Label and input for website -->
+      <div class="form-group">
+        <label for="website" class="control-label">
+          Website
+        </label>
+
+        <input type="text" id="website" name="website" placeholder="Website" class="form-control" value="<%= @restaurant.website %>">
       </div>
 
       <button class="btn btn-warning">

@@ -33,6 +33,8 @@ class RestaurantsController < ApplicationController
     @restaurant.neighborhood = params[:neighborhood]
     @restaurant.city = params[:city]
     @restaurant.address = params[:address]
+    @restaurant.cover_photo = params[:cover_photo]
+    @restaurant.website = params[:website]
 
     save_status = @restaurant.save
 
@@ -64,6 +66,8 @@ class RestaurantsController < ApplicationController
     @restaurant.neighborhood = params[:neighborhood]
     @restaurant.city = params[:city]
     @restaurant.address = params[:address]
+    @restaurant.cover_photo = params[:cover_photo]
+    @restaurant.website = params[:website]
 
     save_status = @restaurant.save
 
